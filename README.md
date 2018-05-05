@@ -12,14 +12,16 @@
    '/Users/me/venia-pwa-concept', '/Users/me/venia-pwa-concept', type: "nfs",
    create: true`, where the specified path is the absolute path locally to your
    copy of this repository
-3. Go through the normal setup process for the Vagrant box (`./init-project`).
-4. On your host, `cd` to
+3. Copy `magento2-vagrant-for-developers/etc/config.yaml.dist` to `magento2-vagrant-for-developers/etc/config.yaml`,
+ update php_version to 7.1 and add branch 2.3-develop to repository [config.yaml](magento-vagrant-config.yaml)
+4. Go through the normal setup process for the Vagrant box (`./init-project`).
+5. On your host, `cd` to
    `magento2-vagrant-for-developers/magento2ce/app/code/Magento`, and run `ln -s
    /Users/me/venia-pwa-concept/module Pwa`
-5. On your host, `cd` to
+6. On your host, `cd` to
    `magento2-vagrant-for-developers/magento2ce/app/design/frontend/Magento`, and
    run `ln -s /Users/me/venia-pwa-concept/theme-frontend-venia venia`
-6. Copy `.env.dist` to `.env` and update as necessary, i.e. with the correct host URL.
-7. Run `npm install`. Note if you run inside the vagrant box you may need to install and [switch to a newer version of node](https://github.com/paliarush/magento2-vagrant-for-developers#switch-nodejs-versions).
-8. If making changes, run `npm start` to start the development server.
-9. Login to `/admin`, and change your store's theme to `venia`
+7. Copy `.env.dist` to `.env` and update as necessary, i.e. with the correct host URL.
+8. Run `npm install`. Note if you run inside the vagrant box you may need to install and [switch to a newer version of node](https://github.com/paliarush/magento2-vagrant-for-developers#switch-nodejs-versions).
+9. If making changes, run `npm start` to start the development server.
+10. Login to `/admin`, and change your store's theme to `venia`
